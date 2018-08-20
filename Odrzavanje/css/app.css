@@ -1,0 +1,19 @@
+
+#izbornik > div > ul > li.menu-text > a{
+    padding: 0;
+
+}
+
+.callout {
+    margin: 0;
+}
+
+
+
+   .center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  
+}
+

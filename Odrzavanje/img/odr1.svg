@@ -1,0 +1,17 @@
+<svg width="580" height="400" xmlns="http://www.w3.org/2000/svg">
+ <!-- Created with Method Draw - http://github.com/duopixel/Method-Draw/ -->
+ <g>
+  <title>background</title>
+  <rect fill="#fff" id="canvas_background" height="402" width="582" y="-1" x="-1"/>
+  <g display="none" overflow="visible" y="0" x="0" height="100%" width="100%" id="canvasGrid">
+   <rect fill="url(#gridpattern)" stroke-width="0" y="0" x="0" height="100%" width="100%"/>
+  </g>
+ </g>
+ <g>
+  <title>Layer 1</title>
+  <line stroke-linecap="undefined" stroke-linejoin="undefined" id="svg_2" y2="469.5" x2="391.5" y1="469.5" x1="392.5" stroke-width="1.5" stroke="#000" fill="none"/>
+  <text stroke="null" transform="matrix(17.187353134155273,0,0,5.425369739532471,-4950.800785124302,-651.9122797548771) " xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="24" id="svg_3" y="172" x="292.5" stroke-width="0" fill="#000000"/>
+  <text stroke="null" transform="matrix(39.81432912039054,0,0,12.77709501938898,-8505.637957669973,-2588.4530884842225) " xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="20" id="svg_4" y="227" x="214.5" fill-opacity="null" stroke-opacity="null" stroke-width="0" fill="#064725"/>
+  <text font-weight="bold" xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="76" id="svg_5" y="193" x="40.164063" fill-opacity="null" stroke-opacity="null" stroke-width="0" stroke="null" fill="#064725">ODRŽAVANJE</text>
+ </g>
+</svg>
