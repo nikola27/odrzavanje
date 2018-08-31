@@ -32,7 +32,7 @@ if(isset($_POST["dodaj"])){
           </div>
           <div class="floated-label-wrapper">
             <label for="Prezime">Prezime</label>
-            <input autocomplete="off" type="text" id="Prezime" name="Prezime" placeholder="prezime korisnika">
+            <input autocomplete="off" type="text" id="Prezime" name="prezime" placeholder="prezime korisnika">
           </div>
           <div class="floated-label-wrapper">
             <label for="lozinka">Lozinka</label>

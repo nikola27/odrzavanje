@@ -4,8 +4,8 @@ if(!isset($_SESSION[$idAPP."o"])){
 }
 
 if(isset($_POST["dodaj"])){
-  $izraz = $veza->prepare("insert into tvrtka (ime, prezime, lozinka, oib, telefon, adresa, email) values 
-                          (:ime, :prezime, :lozinka, :oib, :telefon, :adresa, :email)");
+  $izraz = $veza->prepare("insert into tvrtka (naziv, adresa, oib, telefon, email) values 
+                          (:naziv, :adresa, :oib, :telefon, :email)");
   unset($_POST["dodaj"]);
   $izraz->execute($_POST);
   header("location: index.php");
@@ -27,12 +27,12 @@ if(isset($_POST["dodaj"])){
     <form class="callout text-center" action="<?php echo $_SERVER["PHP_SELF"] ?>" method="post"  >
   
           <div class="floated-label-wrapper">
-            <label for="ime">Naziv</label>
+            <label for="naziv">Naziv</label>
             <input autocomplete="off" type="text" id="naziv" name="naziv" placeholder="naziv tvrtke">
           </div>
           <div class="floated-label-wrapper">
-            <label for="Prezime">Adresa</label>
-            <input autocomplete="off" type="text" id="Adresa" name="Adresa" placeholder="Adresa tvrtke">
+            <label for="adresa">Adresa</label>
+            <input autocomplete="off" type="text" id="adresa" name="adresa" placeholder="Adresa tvrtke">
           </div>
           
           <div class="floated-label-wrapper">
