@@ -26,3 +26,6 @@ U readme.md napisati koje su točke realizirane-
 U izborniku aplikacije postaviti stavku link na github kod-
 
 U izborniku aplikacije postaviti stavku link na ERA dijagram-
+
+
+novi http://www.odrzavanje.byethost24.com
