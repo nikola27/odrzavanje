@@ -10,9 +10,9 @@ if(!isset($_GET["sifra"]) && !isset($_POST["sifra"])){
 
 
 if(isset($_POST["promjeni"])){
-  $izraz = $veza->prepare("update tvrtka set ime=:ime,
-                          prezime=:prezime,lozinka=:lozinka,oib=:oib, 
-                          telefon=:telefon, adresa=:adresa,email=:email
+  $izraz = $veza->prepare("update tvrtka set naziv=:naziv,
+                          adresa=:adresa,oib=:oib, 
+                          telefon=:telefon,email=:email
                           where sifra=:sifra;");
   unset($_POST["promjeni"]);
   $izraz->execute($_POST);
@@ -39,12 +39,12 @@ if(isset($_POST["promjeni"])){
     <form class="callout text-center" action="<?php echo $_SERVER["PHP_SELF"] ?>" method="post">
           
     <div class="floated-label-wrapper">
-            <label for="ime">Naziv</label>
+            <label for="naziv">Naziv</label>
             <input autocomplete="off" type="text" id="naziv" name="naziv" placeholder="naziv tvrtke">
           </div>
           <div class="floated-label-wrapper">
-            <label for="Prezime">Adresa</label>
-            <input autocomplete="off" type="text" id="Adresa" name="Adresa" placeholder="Adresa tvrtke">
+            <label for="adresa">Adresa</label>
+            <input autocomplete="off" type="text" id="adresa" name="adresa" placeholder="Adresa tvrtke">
           </div>
           
           <div class="floated-label-wrapper">
@@ -63,7 +63,24 @@ if(isset($_POST["promjeni"])){
           </div>
           
           <input type="hidden" name="sifra" value="<?php echo $o->sifra ?>" />
-          <input class="button expanded" type="submit" name="promjeni" value="Promjeni">
+          
+
+        <input type="hidden" name="sifra" value="<?php echo $o->sifra ?>" />
+        
+        
+        <div class="grid-x">
+            <div class="cell large-1"></div>
+            <div class="cell large-4">
+              <a href="index.php" class="alert button expanded">Nazad</a>
+            </div>
+            <div class="cell large-2"></div>
+            <div class="cell large-4">
+            <input class="button expanded" type="submit" name="promjeni" value="Promjeni">
+            </div>
+          </div>    
+        
+        
+        
         </form>
 
     <?php include_once "../../predlozak/podnozje.php" ?>

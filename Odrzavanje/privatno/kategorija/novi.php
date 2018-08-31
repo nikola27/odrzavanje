@@ -4,7 +4,7 @@ if(!isset($_SESSION[$idAPP."o"])){
 }
 
 if(isset($_POST["dodaj"])){
-  $izraz = $veza->prepare("insert into kvar (naziv) values 
+  $izraz = $veza->prepare("insert into kategorija (naziv) values 
                           (:naziv)");
   unset($_POST["dodaj"]);
   $izraz->execute($_POST);

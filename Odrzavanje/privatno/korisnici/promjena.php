@@ -43,8 +43,8 @@ if(isset($_POST["promjeni"])){
             <input autocomplete="off" type="text" id="ime" name="ime" placeholder="ime korisnika">
           </div>
           <div class="floated-label-wrapper">
-            <label for="Prezime">Prezime</label>
-            <input autocomplete="off" type="text" id="Prezime" name="Prezime" placeholder="prezime korisnika">
+            <label for="prezime">Prezime</label>
+            <input autocomplete="off" type="text" id="prezime" name="prezime" placeholder="prezime korisnika">
           </div>
           <div class="floated-label-wrapper">
             <label for="lozinka">Lozinka</label>
@@ -69,8 +69,26 @@ if(isset($_POST["promjeni"])){
           </div>
           
           <input type="hidden" name="sifra" value="<?php echo $o->sifra ?>" />
-          <input class="button expanded" type="submit" name="promjeni" value="Promjeni">
-        </form>
+          
+
+              <input type="hidden" name="sifra" value="<?php echo $o->sifra ?>" />
+
+
+              <div class="grid-x">
+                  <div class="cell large-1"></div>
+                  <div class="cell large-4">
+                    <a href="index.php" class="alert button expanded">Nazad</a>
+                  </div>
+                  <div class="cell large-2"></div>
+                  <div class="cell large-4">
+                  <input class="button expanded" type="submit" name="promjeni" value="Promjeni">
+                  </div>
+                </div>    
+
+
+
+
+                      </form>
 
     <?php include_once "../../predlozak/podnozje.php" ?>
 

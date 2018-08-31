@@ -43,7 +43,21 @@ if(isset($_POST["promjeni"])){
         </form>
 
         <input type="hidden" name="sifra" value="<?php echo $o->sifra ?>" />
-          <input class="button expanded" type="submit" name="promjeni" value="Promjeni">
+        
+        
+        <div class="grid-x">
+            <div class="cell large-1"></div>
+            <div class="cell large-4">
+              <a href="index.php" class="alert button expanded">Nazad</a>
+            </div>
+            <div class="cell large-2"></div>
+            <div class="cell large-4">
+            <input class="button expanded" type="submit" name="promjeni" value="Promjeni">
+            </div>
+          </div>    
+        
+        
+        
         </form>
 
     <?php include_once "../../predlozak/podnozje.php" ?>
