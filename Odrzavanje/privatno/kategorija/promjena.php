@@ -40,7 +40,7 @@ if(isset($_POST["promjeni"])){
             <label for="naziv">Naziv</label>
             <input autocomplete="off" type="text" id="naziv" name="naziv">
           </div>
-        </form>
+        
 
         <input type="hidden" name="sifra" value="<?php echo $o->sifra ?>" />
         

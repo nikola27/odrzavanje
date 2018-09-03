@@ -48,11 +48,11 @@ group by a.sifra, a.naziv
       <a href="promjena.php?sifra=<?php echo $red->sifra; ?>">
       <i class="fas fa-edit fa"></i> 
       </a>
-      
+      <?php if($red->kategorije==0): ?>
       <a onclick="return confirm('Sigurno obrisati <?php echo $red->naziv ?>')" href="obrisi.php?sifra=<?php echo $red->sifra; ?>">
       <i class="fas fa-trash fa" style="color: red;"></i>
       </a>
-     
+      <?php endif;?>
       </td>
       </tr>
     <?php endforeach;?>

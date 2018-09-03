@@ -55,11 +55,11 @@ $rezultati = $izraz->fetchAll(PDO::FETCH_OBJ);
     <a href="promjena.php?sifra=<?php echo $red->sifra; ?>">
      <i class="fas fa-edit"></i> 
      </a>
-    
+     <?php if($red->tvrtke==0): ?>
     <a onclick="return confirm('Sigurno obrisati <?php echo $red->naziv?>')" href="obrisi.php?sifra=<?php echo $red->sifra; ?>">
     <i class="fas fa-trash" style="color: red;"></i>
     </a>
-    
+    <?php endif;?>
     </td>
     </tr>
     <?php endforeach;?>
