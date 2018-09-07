@@ -40,26 +40,26 @@ if(isset($_POST["promjeni"])){
           
     <div class="floated-label-wrapper">
             <label for="naziv">Naziv</label>
-            <input autocomplete="off" type="text" id="naziv" name="naziv" placeholder="naziv tvrtke">
+            <input value="<?php echo $o->naziv ?>"  autocomplete="off" type="text" id="naziv" name="naziv" placeholder="naziv tvrtke">
           </div>
           <div class="floated-label-wrapper">
             <label for="adresa">Adresa</label>
-            <input autocomplete="off" type="text" id="adresa" name="adresa" placeholder="Adresa tvrtke">
+            <input value="<?php echo $o->adresa ?>" autocomplete="off" type="text" id="adresa" name="adresa" placeholder="Adresa tvrtke">
           </div>
           
           <div class="floated-label-wrapper">
             <label for="oib">OIB</label>
-            <input autocomplete="off" type="text" id="oib" name="oib">
+            <input value="<?php echo $o->oib ?>" autocomplete="off" type="text" id="oib" name="oib">
           </div>
 
           <div class="floated-label-wrapper">
             <label for="telefon">Telefon</label>
-            <input autocomplete="off" type="text" id="telefon" name="telefon" placeholder="telefon">
+            <input value="<?php echo $o->telefon ?>" autocomplete="off" type="text" id="telefon" name="telefon" placeholder="telefon">
           </div>
         
           <div class="floated-label-wrapper">
             <label for="email">Email</label>
-            <input autocomplete="off" type="text" id="email" name="email" placeholder="email">
+            <input value="<?php echo $o->email ?>" autocomplete="off" type="text" id="email" name="email" placeholder="email">
           </div>
           
           <input type="hidden" name="sifra" value="<?php echo $o->sifra ?>" />

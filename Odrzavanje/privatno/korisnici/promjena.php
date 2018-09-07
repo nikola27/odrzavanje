@@ -40,32 +40,32 @@ if(isset($_POST["promjeni"])){
           
            <div class="floated-label-wrapper">
             <label for="ime">Ime</label>
-            <input autocomplete="off" type="text" id="ime" name="ime" placeholder="ime korisnika">
+            <input value="<?php echo $o->ime ?>"  autocomplete="off" type="text" id="ime" name="ime" placeholder="ime korisnika">
           </div>
           <div class="floated-label-wrapper">
             <label for="prezime">Prezime</label>
-            <input autocomplete="off" type="text" id="prezime" name="prezime" placeholder="prezime korisnika">
+            <input value="<?php echo $o->prezime ?>" autocomplete="off" type="text" id="prezime" name="prezime" placeholder="prezime korisnika">
           </div>
           <div class="floated-label-wrapper">
             <label for="lozinka">Lozinka</label>
-            <input autocomplete="off" type="text" id="lozinka" name="lozinka" placeholder="lozinka">
+            <input  value="<?php echo $o->lozinka ?>" autocomplete="off" type="text" id="lozinka" name="lozinka" placeholder="lozinka">
           </div>
           <div class="floated-label-wrapper">
             <label for="oib">OIB</label>
-            <input autocomplete="off" type="text" id="oib" name="oib">
+            <input value="<?php echo $o->oib ?>" autocomplete="off" type="text" id="oib" name="oib">
           </div>
 
           <div class="floated-label-wrapper">
             <label for="telefon">Telefon</label>
-            <input autocomplete="off" type="text" id="telefon" name="telefon" placeholder="telefon">
+            <input  value="<?php echo $o->telefon ?>" autocomplete="off" type="text" id="telefon" name="telefon" placeholder="telefon">
           </div>
           <div class="floated-label-wrapper">
             <label for="adresa">Adresa</label>
-            <input autocomplete="off" type="text" id="adresa" name="adresa" placeholder="adresa">
+            <input  value="<?php echo $o->adresa ?>" autocomplete="off" type="text" id="adresa" name="adresa" placeholder="adresa">
           </div>
           <div class="floated-label-wrapper">
             <label for="email">Email</label>
-            <input autocomplete="off" type="text" id="email" name="email" placeholder="email">
+            <input  value="<?php echo $o->email ?>" autocomplete="off" type="text" id="email" name="email" placeholder="email">
           </div>
           
           <input type="hidden" name="sifra" value="<?php echo $o->sifra ?>" />

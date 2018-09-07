@@ -15,7 +15,7 @@ if(!isset($_SESSION[$idAPP."o"])){
 
     <?php include_once "../../predlozak/izbornik.php" ?>
 
-<a href="novi.php" class="success button expanded" style= "background-color: grey; " >Dodaj kategoriju</a>
+<a href="novi.php" class="success button expanded" style= "background-color: red; font-size:1em; font-weight:bold; color:white;"; >Dodaj kategoriju</a>
   <?php
 
  $izraz = $veza->prepare("

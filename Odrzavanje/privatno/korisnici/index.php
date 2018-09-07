@@ -15,7 +15,7 @@ if(!isset($_SESSION[$idAPP."o"])){
 
     <?php include_once "../../predlozak/izbornik.php" ?>
 
-<a href="novi.php" class="success button expanded" style= "background-color: grey; ">Dodaj korisnika</a>
+<a href="novi.php" class="success button expanded" style= "background-color: red; font-size:1em; font-weight:bold; color:white;"; >Dodaj korisnika</a>
   <?php
 
 $izraz = $veza->prepare("
@@ -39,7 +39,7 @@ $rezultati = $izraz->fetchAll(PDO::FETCH_OBJ);
    <tr>
    <th>Ime</th>
    <th>Prezime</th>
-   <th>Lozinka</th>
+  
    <th>OIB</th>
    <th>Telefon</th>
    <th>Adresa</th>
@@ -52,7 +52,7 @@ $rezultati = $izraz->fetchAll(PDO::FETCH_OBJ);
      <tr>
      <td><?php echo $red->ime; ?></td>
      <td><?php echo $red->prezime; ?></td>
-     <td><?php echo $red->lozinka; ?></td>
+     
      <td><?php echo $red->oib; ?></td>
      <td><?php echo $red->telefon; ?></td>
      <td><?php echo $red->adresa; ?></td>

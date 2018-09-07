@@ -38,7 +38,7 @@ if(isset($_POST["promjeni"])){
     <form class="callout text-center" action="<?php echo $_SERVER["PHP_SELF"] ?>" method="post">
            <div class="floated-label-wrapper">
             <label for="naziv">Naziv</label>
-            <input autocomplete="off" type="text" id="naziv" name="naziv">
+            <input value="<?php echo $o->naziv ?>"  autocomplete="off" type="text" id="naziv" name="naziv">
           </div>
         
 
