@@ -92,7 +92,7 @@ if(isset($_POST["dodaj"])){
 
           <div class="floated-label-wrapper">
 
-            <?php if(!isset($greske["ime"])): ?>
+            <?php if(!isset($greske["prezime"])): ?>
            
            
             <label for="prezime">Prezime</label>

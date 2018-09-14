@@ -28,9 +28,8 @@ $izraz->execute();
 $rezultati = $izraz->fetchAll(PDO::FETCH_OBJ);
 ?>
 
-<div class="cell large-12">
-  
- <table>
+<div class="cell large-6">
+  <table class="responsive-card-table unstriped">
    <thead>
    <tr>
    <th>Naziv</th>
@@ -45,11 +44,12 @@ $rezultati = $izraz->fetchAll(PDO::FETCH_OBJ);
    <?php foreach($rezultati as $red):?>
 
      <tr>
-     <td><?php echo $red->naziv; ?></td>
-     <td><?php echo $red->adresa; ?></td>
-     <td><?php echo $red->oib; ?></td>
-     <td><?php echo $red->telefon; ?></td>
-     <td><?php echo $red->email; ?></td>
+     <td data-label="Naziv"><?php echo $red->naziv; ?></td>
+     <td data-label="Adresa"><?php echo $red->adresa; ?></td>
+     <td data-label="OIB"><?php echo $red->oib; ?></td>
+     <td data-label="Telefon"><?php echo $red->telefon; ?></td>
+     <td data-label="Email"><?php echo $red->email; ?></td>
+     <td data-label="Akcija">
       
     <td>
     <a href="promjena.php?sifra=<?php echo $red->sifra; ?>">
@@ -60,13 +60,13 @@ $rezultati = $izraz->fetchAll(PDO::FETCH_OBJ);
     <i class="fas fa-trash" style="color: red;"></i>
     </a>
     <?php endif;?>
-    </td>
-    </tr>
+          </td>
+      </tr>
+     </tr>
     <?php endforeach;?>
     </tbody>
     </table>
-    </div>
-
+  </div>
     <?php include_once "../../predlozak/podnozje.php" ?>
 
     <?php include_once "../../predlozak/skripte.php" ?>

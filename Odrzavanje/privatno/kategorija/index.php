@@ -30,10 +30,11 @@ group by a.sifra, a.naziv
  $izraz->execute();
  $rezultati = $izraz->fetchAll(PDO::FETCH_OBJ);
  ?>
- <div class="cell large-12 ">
  
+ 
+ <div class="cell large-6">
+  <table class="responsive-card-table unstriped">
 
-  <table>
     <thead>
     <tr>
     <th>Naziv</th>
@@ -43,8 +44,9 @@ group by a.sifra, a.naziv
     <tbody>
     <?php foreach($rezultati as $red):?>
       <tr>
-      <td><?php echo $red->naziv; ?></td>
-      <td>
+      <td data-label="Naziv"><?php echo $red->naziv; ?></td>
+      <td data-label="Akcija">
+
       <a href="promjena.php?sifra=<?php echo $red->sifra; ?>">
       <i class="fas fa-edit fa"></i> 
       </a>
@@ -53,12 +55,13 @@ group by a.sifra, a.naziv
       <i class="fas fa-trash fa" style="color: red;"></i>
       </a>
       <?php endif;?>
-      </td>
+          </td>
       </tr>
+     </tr>
     <?php endforeach;?>
     </tbody>
     </table>
-
+  </div>
     <?php include_once "../../predlozak/podnozje.php" ?>
 
     <?php include_once "../../predlozak/skripte.php" ?>
