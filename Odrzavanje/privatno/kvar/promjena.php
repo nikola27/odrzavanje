@@ -10,7 +10,8 @@ if(!isset($_GET["sifra"]) && !isset($_POST["sifra"])){
 
 
 if(isset($_POST["promjeni"])){
-  $izraz = $veza->prepare("update kvar set naziv=:naziv                         
+  $izraz = $veza->prepare("update kvar set naziv=:naziv,
+                          opis=:opis, kategorija=:kategorija, datum=:datum                    
                           where sifra=:sifra;");
   unset($_POST["promjeni"]);
   $izraz->execute($_POST);
@@ -40,26 +41,24 @@ if(isset($_POST["promjeni"])){
             <label for="naziv">Naziv</label>
             <input value="<?php echo $o->naziv ?>"  autocomplete="off" type="text" id="naziv" name="naziv">
           </div>
-          <form class="callout text-center" action="<?php echo $_SERVER["PHP_SELF"] ?>" method="post">
+
+          
            <div class="floated-label-wrapper">
             <label for="opis">Opis</label>
-            <input value="<?php echo $o->naziv ?>"  autocomplete="off" type="text" id="opis" name="opis">
+            <input value="<?php echo $o->opis ?>"  autocomplete="off" type="text" id="opis" name="opis">
           </div>
         
-          <form class="callout text-center" action="<?php echo $_SERVER["PHP_SELF"] ?>" method="post">
            <div class="floated-label-wrapper">
             <label for="kategorija">Kategorija</label>
             <input value="<?php echo $o->kategorija ?>"  autocomplete="off" type="text" id="kategorija" name="kategorija">
           </div>
         
-          <form class="callout text-center" action="<?php echo $_SERVER["PHP_SELF"] ?>" method="post">
+          
            <div class="floated-label-wrapper">
             <label for="datum">Datum</label>
             <input value="<?php echo $o->datum ?>"  autocomplete="off" type="text" id="datum" name="datum">
           </div>
         
-        
-
         <input type="hidden" name="sifra" value="<?php echo $o->sifra ?>" />
         
         

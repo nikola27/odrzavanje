@@ -67,9 +67,7 @@ if(isset($_POST["promjeni"])){
             <label for="email">Email</label>
             <input  value="<?php echo $o->email ?>" autocomplete="off" type="text" id="email" name="email" placeholder="email">
           </div>
-          
-          <input type="hidden" name="sifra" value="<?php echo $o->sifra ?>" />
-          
+
 
               <input type="hidden" name="sifra" value="<?php echo $o->sifra ?>" />
 

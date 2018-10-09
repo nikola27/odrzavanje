@@ -64,7 +64,7 @@ $rezultati = $izraz->fetchAll(PDO::FETCH_OBJ);
      </a>
      
      
-          <!--ako želimo da se ovaj uvjet ispuni iz upita za tablicu gore, bez uvjeta kao select *-->
+          
           <?php if($red->korisnika==0): ?> 
           <a onclick="return confirm('Sigurno obrisati <?php echo $red->ime ?>')" href="obrisi.php?sifra=<?php echo $red->sifra; ?>">
             <i class="fas fa-trash fa " style="color: red;"></i>

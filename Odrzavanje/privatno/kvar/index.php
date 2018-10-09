@@ -59,7 +59,7 @@ if(!isset($_SESSION[$idAPP."o"])){
       <i class="fas fa-edit fa"></i> 
       </a>
       <?php if($red->kvarovi==0): ?>
-      <a onclick="return confirm('Sigurno obrisati <?php echo $red->naziv ?>')" href="obrisi.php?sifra=<?php echo $red->sifra; ?>">
+      <a onclick="return confirm('Sigurno obrisati <?php echo $red->kvarovi ?>')" href="obrisi.php?sifra=<?php echo $red->sifra; ?>">
       <i class="fas fa-trash fa" style="color: red;"></i>
       </a>
       <?php endif;?>
