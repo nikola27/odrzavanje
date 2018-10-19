@@ -15,6 +15,7 @@
         stavkaIzbornika($putanjaAPP,"privatno/korisnici/index.php","Korisnici");
         stavkaIzbornika($putanjaAPP,"privatno/tvrtka/index.php","Tvrtke");
         stavkaIzbornika($putanjaAPP,"privatno/kategorija/index.php","Kategorije");
+        stavkaIzbornika($putanjaAPP,"privatno/kvar/index.php","Kvar");
         //stavkaIzbornika($putanjaAPP,"privatno/ERA.php","ERA dijagram");
         ?>
         <a href="https://github.com/nikola27/mojprojekt18/blob/master/ERAdijagram.png"target="_blank">ERA</a>
