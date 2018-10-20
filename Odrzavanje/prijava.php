@@ -53,19 +53,45 @@
 
      
    <div class="grid-x grid-padding-x " >
-      <div class="large-4 cell text-center ">
+   <div class="large-4 cell text-center position- center">
         <form class="callout text-center" action="autoriziraj.php" method="post">
           <h1>Prijava</h1>
           <div class="floated-label-wrapper">
-            <label for="korisnik">Korisnik</label>
-            <input autocomplete="off" type="text" id="korisnik" name="korisnik" placeholder="nsaric">
+            <label for="email">Email</label>
+            <input autocomplete="off" type="text" id="email" name="email" placeholder="email">
           </div>
           <div class="floated-label-wrapper">
             <label for="lozinka">Lozinka</label>
-            <input autocomplete="off" type="password" id="lozinka" name="lozinka" placeholder="n">
+            <input autocomplete="off" type="password" id="lozinka" name="lozinka" placeholder="lozinka">
           </div>
           <input class="button expanded" type="submit" value="Potvrdi">
         </form>
+        <div class="large-6 cell text-center">
+        <form class="callout text-center" action="registracija.php" method="post">
+          <h1>Registracija</h1>
+          <div class="floated-label-wrapper">
+            <label for="ime">Ime</label>
+            <input autocomplete="off" type="text" id="ime" name="ime" placeholder="Ime">
+          </div>
+          <div class="floated-label-wrapper">
+            <label for="prezime">Prezime</label>
+            <input autocomplete="off" type="text" id="prezime" name="prezime" placeholder="Prezime">
+          </div>
+          <div class="floated-label-wrapper">
+            <label for="email">Email</label>
+            <input autocomplete="off" type="text" id="email" name="email" placeholder="email">
+          </div>
+          <div class="floated-label-wrapper">
+            <label for="lozinka">Lozinka</label>
+            <input autocomplete="off" type="password" id="lozinka" name="lozinka" placeholder="lozinka">
+          </div>
+          <div class="floated-label-wrapper">
+            <label for="plozinka">Ponovo lozinka</label>
+            <input autocomplete="off" type="password" id="plozinka" name="plozinka" placeholder="ponovi">
+          </div>
+          <input class="button expanded" type="submit" value="Registriraj se">
+        </form>
+      </div>
       </div>
     </div>
     

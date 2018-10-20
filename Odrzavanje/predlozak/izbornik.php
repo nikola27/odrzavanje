@@ -11,20 +11,27 @@
       <?php 
       stavkaIzbornika($putanjaAPP,"index.php","<i class=\"fas fa-home\" style=\"color: black;\"></i>");
       if(isset($_SESSION[$idAPP."o"])):
-        //stavkaIzbornika($putanjaAPP,"privatno/nadzornaPloca.php","Nadzorna ploča");
+      
+        if($_SESSION[$idAPP."o"]->uloga=="korisnik"):
         stavkaIzbornika($putanjaAPP,"privatno/korisnici/index.php","Korisnici");
         stavkaIzbornika($putanjaAPP,"privatno/tvrtka/index.php","Tvrtke");
         stavkaIzbornika($putanjaAPP,"privatno/kategorija/index.php","Kategorije");
         stavkaIzbornika($putanjaAPP,"privatno/kvar/index.php","Kvar");
         //stavkaIzbornika($putanjaAPP,"privatno/ERA.php","ERA dijagram");
-        ?>
+        endif;
+        
+        if($_SESSION[$idAPP."o"]->uloga=="admin"):  
+          stavkaIzbornika($putanjaAPP,"privatno/nadzornaPloca.php","Nadzorna ploča");
+          //stavkaIzbornika($putanjaAPP,"privatno/ERA.php","ERA dijagram");
+          ?>
         <a href="https://github.com/nikola27/mojprojekt18/blob/master/ERAdijagram.png"target="_blank">ERA</a>
         <a href="https://github.com/nikola27" target="_blank">GIT</a>
         <?php
         //stavkaIzbornika($putanjaAPP,"privatno/PDO.php","PDO");
-        
+        endif;
       endif;
-      stavkaIzbornika($putanjaAPP,"onama.php","O nama");
+      
+        stavkaIzbornika($putanjaAPP,"onama.php","O nama");
         stavkaIzbornika($putanjaAPP,"kontakt.php","Kontakt");
       ?>  
     </ul>
@@ -33,7 +40,7 @@
   <div class="top-bar-right">
     <ul class="menu">
     <?php if(isset($_SESSION[$idAPP."o"])): ?>
-      <li style="width:100%; text-align: center;"><a href="<?php echo $putanjaAPP; ?>odjava.php">Odjava</a></li>
+      <li style="width:100%; text-align: center;"><a href="<?php echo $putanjaAPP; ?>odjava.php">Odjava <?php echo $_SESSION[$idAPP."o"]->ime ?></a></li>
     <?php else:?>
       <li style="width:100%; text-align: center;"><a href="<?php echo $putanjaAPP; ?>prijava.php">Prijava</a></li>
     <?php endif?>

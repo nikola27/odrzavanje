@@ -8,7 +8,7 @@ $nazivAPP="Održavanje";
 
 switch($_SERVER["HTTP_HOST"]){
     case "localhost":
-    $putanjaAPP="/Odrzavanje1.42/";
+    $putanjaAPP="/Odrzavanje/";
     $veza = new PDO("mysql:host=localhost;dbname=mojprimjer1","edunova","edunova");
     $veza->exec("set names utf8;");
     break;

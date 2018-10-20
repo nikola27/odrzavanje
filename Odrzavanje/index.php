@@ -27,9 +27,9 @@
 
     <?php include_once "predlozak/izbornik.php" ?>
 
-
+      
     <div class="container">
-    <img src="img/naslovnicaslika.jpg" alt="slika" class="center" width="100%;">
+    <img src="img/slika3.jpg" alt="slika" class="center" width="100%;">
     <div class="text">
     <h4>Dobrodošli na stranicu za održavanje nekretnina</h4>
     </div>

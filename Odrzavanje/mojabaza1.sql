@@ -1,5 +1,3 @@
-
-
 drop database if exists mojprimjer1;
 
 create database mojprimjer1 default character set utf8;
@@ -7,9 +5,35 @@ create database mojprimjer1 default character set utf8;
 # za byethost
 # alter database b24_22616270_odrzavanje18 default character set utf8;
 
-
+#c:\xampp\mysql\bin\mysql -uedunova -pedunova --default_character_set=utf8 < C:\xampp\htdocs\Odrzavanje\mojabaza1.sql
 use mojprimjer1;
 #use b24_22616270_odrzavanje18
+
+
+create table operater(
+sifra int not null primary key auto_increment,
+email varchar(50) not null,
+lozinka varchar(255) not null,
+ime varchar(50) not null,
+prezime varchar(50) not null,
+uloga varchar(50) not null,
+sessionid char(32),
+odobren boolean default false
+);
+
+
+insert into operater (email,lozinka,uloga,ime,prezime,odobren)  
+values ('nikola.s89@hotmail.com','$2y$12$q1/lO30GSBxaBmR9jqwggOpgWW3D6g6XnthDYup/RrxeABNop6ouu',
+'admin','Nikola','Šarić',true);
+
+
+insert into operater (email,lozinka,uloga,ime,prezime,odobren)  
+values ('voodoo@gmail.com','$2y$12$SutwYpX/56vRh7R0Ce7zOOrt2j8zO2s9cKhcttJn77EEU/gBfM8s2',
+'korisnik','Dominik','Vidović',true);
+
+insert into operater (email,lozinka,uloga,ime,prezime,odobren)  
+values ('saricnikola27@gmail.com','$2y$12$PHhxbsk683g9S/ooOMJL1.n3r5knA6CYjX3e.ntwLyOFUG1JJQ.dG',
+'korisnik','Boris','Ivoković',true);
 
 create table korisnik(
 sifra int not null primary key auto_increment,
@@ -21,12 +45,13 @@ telefon varchar(20) not null,
 adresa varchar(50) not null,
 email varchar(50) not null
 );
+
 insert into korisnik(sifra, ime, prezime,lozinka, oib, telefon,adresa,email) values
 (null, 'Goran', 'Kvas', '0d86eed65f38608df63d6e188483ff67', '36430061999','0981724455', 'Hrvatskih kraljeva 1, Vinkovci', 'gogac@gmail.com'),
 (null, 'Ivan', 'Galić', '1717a1b1a925568692afd63100331023', '20779865093','0989566293', 'M.J. Zagorke 21, Vinkovci', 'ivan777@gmail.com'),
 (null, 'Dominik', 'Vidović', 'b4aa2b48dbea8988e09addd46b4cbf38', '60208620513','0915629567', 'Zagrebačka 3, Vinkovci', 'voodoo@gmail.com'),
-(null, 'Boris', 'Ivoković','316ac50f97afff7f86603128a9f22bc4', '55193019424','0977764656', 'Zagrebačka 25, Vinkovci', 'boki@gmail.com'),
-(null, 'Nikola', 'Šarić', 'b4d9c7d5ecaa2f65e75e86d23f111d73', '85348629651','0989502219', 'Bognerova 15, Vinkovci', 'nikolas@gmail.com');
+(null, 'Boris', 'Ivoković','b', '55193019424','0977764656', 'Zagrebačka 25, Vinkovci', 'saricnikola27@gmail.com'),
+(null, 'Nikola', 'Šarić', 'n', '85348629651','0989502219', 'Bognerova 15, Vinkovci', 'nikola.s89@hotmail.com');
 
 create table kvar(
 sifra int not null primary key auto_increment,
