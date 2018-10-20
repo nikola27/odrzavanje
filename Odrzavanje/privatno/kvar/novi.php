@@ -52,6 +52,7 @@ if(isset($_POST["dodaj"])){
 
     <?php include_once "../../predlozak/izbornik.php" ?>
     <form class="callout text-center" action="<?php echo $_SERVER["PHP_SELF"] ?>" method="post"  >
+    
   
           <div class="floated-label-wrapper">
           <?php if(!isset($greske["naziv"])): ?>
@@ -89,7 +90,7 @@ if(isset($_POST["dodaj"])){
                                     <input type="text" 
                                     value="<?php echo  $_POST["opis"]; ?>"
                                     class="is-invalid-input" aria-describedby="nazivGreska" data-invalid="" 
-                                    aria-invalid="true" autocomplete="off" type="adresa" id="opis" name="opis" placeholder="opis">
+                                    aria-invalid="true" autocomplete="off" type="text" id="opis" name="opis" placeholder="opis">
                                     <span class="form-error is-visible" id="nazivGreska">
                                     <?php echo $greske["opis"]; ?>
                                     </span>
@@ -97,29 +98,7 @@ if(isset($_POST["dodaj"])){
 
                                     <?php endif;?>
                                     </div>
-
-                  <div class="floated-label-wrapper">
-                  <?php if(!isset($greske["kategorija"])): ?>
-
-                  <label for="kategorija">kategorija</label>
-                  <input autocomplete="off" type="text" id="kategorija" name="kategorija" placeholder="kategorija"
-                  value="<?php echo isset($_POST["kategorija"]) ? $_POST["kategorija"] : "" ?>">
-
-                  <?php else:?>
-
-                  <label class="is-invalid-label">
-                  Zahtjevani unos
-                  <input type="text" 
-                  value="<?php echo  $_POST["kategorija"]; ?>"
-                  class="is-invalid-input" aria-describedby="nazivGreska" data-invalid="" 
-                  aria-invalid="true" autocomplete="off" type="kategorija" id="kategorija" name="kategorija" placeholder="kategorija">
-                  <span class="form-error is-visible" id="nazivGreska">
-                  <?php echo $greske["kategorija"]; ?>
-                  </span>
-                  </label>
-
-                  <?php endif;?>
-                  </div>
+                                    <?php include_once "osnovniPodaci.php" ?>
 
                   <div class="floated-label-wrapper">
                   <?php if(!isset($greske["datum"])): ?>

@@ -48,10 +48,7 @@ if(isset($_POST["promjeni"])){
             <input value="<?php echo $o->opis ?>"  autocomplete="off" type="text" id="opis" name="opis">
           </div>
         
-           <div class="floated-label-wrapper">
-            <label for="kategorija">Kategorija</label>
-            <input value="<?php echo $o->kategorija ?>"  autocomplete="off" type="text" id="kategorija" name="kategorija">
-          </div>
+          <?php include_once "osnovniPodaci.php" ?>
         
           
            <div class="floated-label-wrapper">
