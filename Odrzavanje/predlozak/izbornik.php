@@ -17,14 +17,15 @@
         stavkaIzbornika($putanjaAPP,"privatno/tvrtka/index.php","Tvrtke");
         stavkaIzbornika($putanjaAPP,"privatno/kategorija/index.php","Kategorije");
         stavkaIzbornika($putanjaAPP,"privatno/kvar/index.php","Kvar");
-        //stavkaIzbornika($putanjaAPP,"privatno/ERA.php","ERA dijagram");
+        
+        
         endif;
         
         if($_SESSION[$idAPP."o"]->uloga=="admin"):  
           stavkaIzbornika($putanjaAPP,"privatno/nadzornaPloca.php","Nadzorna ploča");
-          //stavkaIzbornika($putanjaAPP,"privatno/ERA.php","ERA dijagram");
+          stavkaIzbornika($putanjaAPP,"privatno/era.php","ERA dijagram");
           ?>
-        <a href="https://github.com/nikola27/mojprojekt18/blob/master/ERAdijagram.png"target="_blank">ERA</a>
+        
         <a href="https://github.com/nikola27" target="_blank">GIT</a>
         <?php
         //stavkaIzbornika($putanjaAPP,"privatno/PDO.php","PDO");
